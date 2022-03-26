@@ -1,3 +1,72 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow-slides {
+  width: 41vw;
+  height: 41vw;
+  margin: auto;
+  display: flex;
+  border-radius: 5%;
+  overflow: hidden;
+}
+
+.slideshow-slide {
+  width: 100%;
+  height: 100%;
+  transition: 2s;
+  transition-timing-function: ease-in-out;
+}
+
+.slideshow-btns {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.slideshow-btn-size {
+  width: calc(41vw * 0.045);
+  height: calc(41vw * 0.045);
+  margin: calc(41vw * 0.05) calc(41vw * 0.015) 0;
+}
+
+.slideshow-btn {
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+/* tablet */
+@media only screen and (max-width: 834px) {
+  .slideshow-slides {
+    width: 48vw;
+    height: 48vw;
+  }
+
+  .slideshow-btn-size {
+    width: calc(48vw * 0.045);
+    height: calc(48vw * 0.045);
+    margin: calc(48vw * 0.05) calc(48vw * 0.015) 0;
+  }
+}
+
+/* mobile */
+@media only screen and (max-width: 414px) {
+  .slideshow-slides {
+    width: 60vw;
+    height: 60vw;
+  }
+
+  .slideshow-btn-size {
+    width: calc(60vw * 0.045);
+    height: calc(60vw * 0.045);
+    margin: calc(60vw * 0.05) calc(60vw * 0.015) 0;
+  }
+}
